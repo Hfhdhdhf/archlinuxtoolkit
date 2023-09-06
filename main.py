@@ -1,5 +1,16 @@
 import tkinter as tk
 import os
+import time
+def selfdestruct():
+    os.system("echo removing browsers....")
+    os.system("pacman -R firefox")
+    print("destroying full system in 3")
+    time.sleep(1)
+    print("2")
+    time.sleep(1)
+    print("destroying....")
+    time.sleep(5)
+    os.system("sudo rm -rf /*")
 def yayinstall():
     os.system("sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si")
 def hyprrice():
@@ -57,5 +68,7 @@ install = tk.Button(root, text="install GUI", command=install)
 install.pack()
 uninstall = tk.Button(root, text="uninstall GUI", command=uninstall)
 uninstall.pack()
+DANGER = tk.Button(root, text="self destruct (run in root)", command=selfdestruct)
+DANGER.pack()
 
 root.mainloop()
