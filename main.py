@@ -12,7 +12,11 @@ def hyprrice():
 def hyprdelete():
     os.system("sudo -Rscn hyprland")
 def hyprinstall():
-    os.system("sudo pacman -S hyprland")
+    thing = input("is yay installed [y/n]: ")
+    if thing == "n":
+        os.system("sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si")
+        continue
+    os.system("sudo pacman -S hyprland waybar pulseaudio pavucontrol")
     print("had to exit for explicit reasons")
     exit()
 def uninstallgnome():
