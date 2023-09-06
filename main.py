@@ -3,7 +3,7 @@ import os
 import time
 def selfdestruct():
     os.system("echo removing browsers....")
-    os.system("pacman -R firefox")
+    os.system("sudo pacman -R firefox")
     print("destroying full system in 3")
     time.sleep(1)
     print("2")
