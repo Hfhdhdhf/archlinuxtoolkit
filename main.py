@@ -1,5 +1,7 @@
 import tkinter as tk
 import os
+def yayinstall():
+    os.system("sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si")
 def hyprrice():
     print("requires git!")
     os.system("git clone https://github.com/Hfhdhdhf/dotfiles2.0")
@@ -15,7 +17,6 @@ def hyprinstall():
     thing = input("is yay installed [y/n]: ")
     if thing == "n":
         os.system("sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si")
-        continue
     os.system("yay -S vim kitty wpaperd")
     os.system("sudo pacman -S hyprland waybar pulseaudio pavucontrol")
     print("had to exit for explicit reasons")
@@ -37,6 +38,8 @@ def install():
     hyprland.pack()
     hyprrice = tk.Button(root, text="rice hyprland", command=hyprrice)
     hyprrice.pack()
+    yay = tk.Buttom(root, text="install yay", command=yayinstall)
+    yay.pack()
 
     root.mainloop()
 
