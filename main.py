@@ -16,6 +16,7 @@ def hyprinstall():
     if thing == "n":
         os.system("sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si")
         continue
+    os.system("yay -S vim kitty wpaperd")
     os.system("sudo pacman -S hyprland waybar pulseaudio pavucontrol")
     print("had to exit for explicit reasons")
     exit()
