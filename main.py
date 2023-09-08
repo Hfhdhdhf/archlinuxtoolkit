@@ -60,6 +60,7 @@ def uninstall():
     gnome = tk.Button(root, text="uninstall gnome", command=uninstallgnome)
     gnome.pack()
     hypr = tk.Button(root, text="uninstall hyprland", command=hyprdelete)
+    hypr.pack()
     root.mainloop()
 root = tk.Tk()
 root.title("main screen")
