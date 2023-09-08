@@ -49,7 +49,7 @@ def install():
     hyprland.pack()
     hyprrice = tk.Button(root, text="rice hyprland", command=hyprrice)
     hyprrice.pack()
-    yay = tk.Buttom(root, text="install yay", command=yayinstall)
+    yay = tk.Button(root, text="install yay", command=yayinstall)
     yay.pack()
 
     root.mainloop()
